@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Kontakt Oss | Neseskyll Guide - Spørsmål om Nesehelse og Saltvannsbehandling</title>
+    <meta name="description" content="Kontakt Neseskyll Guide for spørsmål om nesehelse, saltvannsbehandling eller feedback. Vi hjelper deg med veiledning om naturlig behandling av tett nese.">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Language" content="no">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1), 0 0 0 1px rgba(255,255,255,0.2);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .header h1 {
+            color: #2d3748;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .breadcrumb {
+            background: #f8fafc;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border: 2px solid #0ea5e9;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(14, 165, 233, 0.2);
+        }
+
+        .contact-card .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-card h3 {
+            color: #0c4a6e;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .contact-card p {
+            color: #0369a1;
+            margin-bottom: 8px;
+        }
+
+        .contact-card a {
+            color: #0ea5e9;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-form h2 {
+            color: #1f2937;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #374151;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+        }
+
+        .faq-section {
+            background: #f9fafb;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .faq-section h2 {
+            color: #1f2937;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #10b981;
+        }
+
+        .faq-item h4 {
+            color: #065f46;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .faq-item p {
+            color: #374151;
+            margin: 0;
+        }
+
+        .response-time {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            border: 2px solid #f59e0b;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .response-time h4 {
+            color: #92400e;
+            margin-bottom: 10px;
+        }
+
+        .response-time p {
+            color: #b45309;
+            margin: 0;
+        }
+
+        .footer-nav {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e2e8f0;
+        }
+
+        .footer-nav a {
+            color: #3b82f6;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            padding: 10px 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-nav a:hover {
+            background: #3b82f6;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .office-hours {
+            background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+            border: 2px solid #10b981;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .office-hours h4 {
+            color: #065f46;
+            margin-bottom: 10px;
+        }
+
+        .office-hours p {
+            color: #047857;
+            margin: 5px 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header" role="banner">
+            <h1>📞 Kontakt Oss</h1>
+            <p>Vi er her for å hjelpe deg med spørsmål om nesehelse og saltvannsbehandling! 🌟</p>
+        </header>
+
+        <nav class="breadcrumb" role="navigation" aria-label="Breadcrumb">
+            <a href="/">🏠 Hjem</a> → <span>📞 Kontakt Oss</span>
+        </nav>
+
+        <main role="main">
+            <section class="contact-grid">
+                <div class="contact-card">
+                    <div class="icon">📧</div>
+                    <h3>Send oss en e-post</h3>
+                    <p><strong>Generelle spørsmål:</strong></p>
+                    <p><a href="mailto:neseskyll@ringdaldigital.no">neseskyll@ringdaldigital.no</a></p>
+                    <br>
+                    <p><strong>Personvernspørsmål:</strong></p>
+                    <p><a href="mailto:neseskyll@ringdaldigital.no">neseskyll@ringdaldigital.no</a></p>
+                    <br>
+                    <p><strong>Forretningssamarbeid:</strong></p>
+                    <p><a href="mailto:neseskyll@ringdaldigital.no">neseskyll@ringdaldigital.no</a></p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="icon">⏰</div>
+                    <h3>Responstid</h3>
+                    <p><strong>E-post:</strong> 24-48 timer</p>
+                    <p><strong>Personvern:</strong> Innen 30 dager</p>
+                    <p><strong>Akutte henvendelser:</strong> Samme dag</p>
+                    <br>
+                    <p style="font-style: italic; color: #6b7280;">Vi svarer på norsk, engelsk og svensk</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="icon">🏢</div>
+                    <h3>Organisasjonsinformasjon</h3>
+                    <p><strong>Bedriftsnavn:</strong> Neseskyll Guide AS</p>
+                    <p><strong>Org.nr:</strong> [Ditt org.nummer]</p>
+                    <p><strong>Adresse:</strong> [Din adresse]</p>
+                    <p><strong>Postnummer:</strong> [Postnummer og sted]</p>
+                    <p><strong>Land:</strong> Norge 🇳🇴</p>
+                </div>
+            </section>
+
+            <section class="response-time">
+                <h4>🚀 Rask respons garantert!</h4>
+                <p>Vi svarer normalt innen 24 timer på hverdager. Ved personvernhenvendelser følger vi GDPR og svarer innen 30 dager.</p>
+            </section>
+
+            <section class="contact-form">
+                <h2>📝 Send oss en melding</h2>
+                <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST">
+                    <div class="form-group">
+                        <label for="name">Navn *</label>
+                        <input type="text" id="name" name="name" required placeholder="Ditt fulle navn">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-postadresse *</label>
+                        <input type="email" id="email" name="email" required placeholder="din@email.no">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Emne *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Velg emne...</option>
+                            <option value="nesehelse">🧂 Spørsmål om nesehelse</option>
+                            <option value="saltvannslosning">💧 Saltvannsløsning - tekniske spørsmål</option>
+                            <option value="bihulebetennelse">🏥 Bihulebetennelse og behandling</option>
+                            <option value="produkter">🛒 Produktanbefalinger</option>
+                            <option value="samarbeid">🤝 Forretningssamarbeid</option>
+                            <option value="personvern">🔒 Personvern og GDPR</option>
+                            <option value="teknisk">⚙️ Tekniske problemer</option>
+                            <option value="feedback">💬 Feedback og forslag</option>
+                            <option value="annet">📋 Annet</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Melding *</label>
+                        <textarea id="message" name="message" required placeholder="Beskriv ditt spørsmål eller din henvendelse her..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="newsletter" value="yes">
+                            Jeg ønsker å motta nyhetsbrev med nesehelse-tips (valgfritt)
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">📩 Send melding</button>
+                </form>
+            </section>
+
+            <section class="office-hours">
+                <h4>🕐 Åpningstider for support</h4>
+                <p><strong>Mandag - Fredag:</strong> 09:00 - 17:00</p>
+                <p><strong>Lørdag:</strong> 10:00 - 14:00</p>
+                <p><strong>Søndag:</strong> Stengt</p>
+                <p><strong>Helligdager:</strong> Stengt</p>
+                <p style="margin-top: 10px; font-style: italic;">*E-post mottas og behandles utenfor åpningstider, men respons kommer i åpningstiden.</p>
+            </section>
+
+            <section class="faq-section">
+                <h2>❓ Ofte stilte spørsmål</h2>
+                
+                <div class="faq-item">
+                    <h4>🧂 Hvor ofte kan jeg bruke saltvannsløsningen?</h4>
+                    <p>Saltvannsløsning kan brukes daglig, i motsetning til nesespray som kan skape avhengighet. Vi anbefaler 1-2 ganger daglig for vedlikehold, eller oftere ved akutte problemer.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>⚠️ Kan jeg bruke guide hvis jeg har kronisk bihulebetennelse?</h4>
+                    <p>Vår guide gir generell informasjon som kan være nyttig, men du bør alltid konsultere lege ved kroniske tilstander. Saltvannsløsning kan være et supplement til medisinsk behandling.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>🛒 Selger dere produkter direkte?</h4>
+                    <p>Nei, vi selger ikke produkter direkte. Vi anbefaler kvalitetsprodukter gjennom affiliate-partnerskap med apotek og butikker.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>💰 Koster det noe å bruke nettsiden?</h4>
+                    <p>Nei! All informasjon på nettsiden er gratis. Vi finansieres gjennom annonser og affiliate-provisjoner når du kjøper anbefalte produkter.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>🔒 Hvordan behandler dere mine personopplysninger?</h4>
+                    <p>Vi tar personvern svært seriøst. Les vår <a href="/privacy-policy.html" style="color: #3b82f6;">personvernserklæring</a> for detaljert informasjon om databehandling.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>🏥 Kan jeg få individuell medisinsk rådgivning?</h4>
+                    <p>Nei, vi gir kun generell helseinformasjon og kan ikke gi personlig medisinsk rådgivning. Kontakt alltid lege for individuelle helsespørsmål.</p>
+                </div>
+            </section>
+
+            <section style="background: linear-gradient(135deg, #fef3c7, #fde68a); border-radius: 15px; padding: 25px; margin: 30px 0; text-align: center; border: 2px solid #f59e0b;">
+                <h3 style="color: #92400e; margin-bottom: 15px;">🚨 Viktig melding om helsespørsmål</h3>
+                <p style="color: #b45309; margin: 0;">
+                    Vi kan ikke gi individuell medisinsk rådgivning eller diagnostisere tilstander. 
+                    Ved alvorlige eller vedvarende symptomer, kontakt lege eller legevakt umiddelbart. 
+                    Ved akutte helseproblemer, ring 113 (akuttmedisin) eller 116117 (legevakt).
+                </p>
+            </section>
+
+            <section style="background: #f9fafb; border-radius: 15px; padding: 25px; margin: 30px 0;">
+                <h3 style="color: #1f2937; margin-bottom: 15px; text-align: center;">🤝 Forretningssamarbeid</h3>
+                <p style="color: #4b5563; text-align: center;">
+                    Er du interessert i samarbeid? Vi jobber med apotek, helseprodusenter og andre aktører innen naturlig helse. 
+                    Send oss en e-post på <a href="mailto:neseskyll@ringdaldigital.no" style="color: #3b82f6;">neseskyll@ringdaldigital.no</a> 
+                    med en beskrivelse av ditt forslag.
+                </p>
+            </section>
+        </main>
+
+        <footer class="footer-nav" role="contentinfo">
+            <a href="/">🏠 Tilbake til Hovedsiden</a>
+            <a href="/privacy-policy.html">🔒 Personvernserklæring</a>
+            <a href="/terms.html">📋 Vilkår og Betingelser</a>
+        </footer>
+    </div>
+
+    <script>
+        // Simple form validation and feedback
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            if (!name || !email || !subject || !message) {
+                e.preventDefault();
+                alert('⚠️ Vennligst fyll ut alle obligatoriske felt markert med *');
+                return;
+            }
+
+            // Show success message (you can customize this)
+            alert('📧 Takk for din henvendelse! Vi svarer så snart som mulig.');
+        });
+
+        // Auto-focus on first form field when page loads
+        window.addEventListener('load', function() {
+            document.getElementById('name').focus();
+        });
+    </script>
+</body>
+</html>
